@@ -11,15 +11,27 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/juegovoz.json", {onProgress: UnityProgress});
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="webgl-content">
+      
       <div id="unityContainer" style="width: 1366px; height: 768px"></div>
+      <script src="TemplateData/responsive.javascript"></script>
+	<script>
+	setTimeout(function(){
+		$("#gameContainer").find("button").click();
+	}, 200);
+		
+	</script>
+	<script>
+		screen.lockOrientation('landscape');
+	</script>
       <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        
         <div class="title">JuegosAlcadiadeTunja</div>
       </div>
     </div>
+    
   </body>
 </html>
